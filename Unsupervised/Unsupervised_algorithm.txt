@@ -1,0 +1,39 @@
+Unsupervised machine learning Algorithm:
+
+1. K-Means Clustering
+  from sklearn.cluster import KMeans
+  model = KMeans(n_clusters=3)
+
+2. DBSCAN
+  from sklearn.cluster import DBSCAN
+  model = DBSCAN(eps=0.5, min_samples=5)
+
+3. Hierarchical / Agglomerative Clustering
+  from sklearn.cluster import AgglomerativeClustering
+  model = AgglomerativeClustering(n_clusters=3)
+
+5. Gaussian Mixture Model (GMM)
+  from sklearn.mixture import GaussianMixture
+  model = GaussianMixture(n_components=3)
+
+6. PCA — Dimensionality Reduction
+  from sklearn.decomposition import PCA
+  model = PCA(n_components=2)
+
+7. Isolation Forest — Anomaly Detection
+  from sklearn.ensemble import IsolationForest
+  model = IsolationForest(contamination=0.05)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example: DBSCAN
+  import pandas as pd
+  from sklearn.cluster import DBSCAN
+  df = pd.read_csv("data.csv")
+  model = DBSCAN(eps=0.5, min_samples=5)
+  labels = model.fit_predict(df)
+  print(labels)
+
+Note: In unsupervised learning, you generally don't have y_train/y_test because there is no target label during training.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
