@@ -1,0 +1,55 @@
+1. Logistic Regression
+  from sklearn.linear_model import LogisticRegression
+  model = LogisticRegression()
+
+2. K-Nearest Neighbors (KNN)
+  from sklearn.neighbors import KNeighborsClassifier
+  model = KNeighborsClassifier(n_neighbors=5)
+
+3. Decision Tree
+  from sklearn.tree import DecisionTreeClassifier
+  model = DecisionTreeClassifier()
+
+4. Random Forest
+  from sklearn.ensemble import RandomForestClassifier
+  model = RandomForestClassifier
+
+5. Support Vector Machine (SVM)
+  from sklearn.svm import SVC
+  model = SVC
+
+6. Naive Bayes
+  For text classification, you commonly use:
+    from sklearn.naive_bayes import MultinomialNB
+    model = MultinomialNB()
+  
+  Other Naive Bayes algorithms:
+    from sklearn.naive_bayes import GaussianNB
+    from sklearn.naive_bayes import MultinomialNB
+
+7. Gradient Boosting
+  from sklearn.ensemble import GradientBoostingClassifier
+  model = GradientBoostingClassifier()
+
+8. XGBoost
+  XGBoost is a separate library:
+    from xgboost import XGBClassifier
+    model = XGBClassifier()
+  
+  
+You may need to install / import it first:
+  pip install xgboost
+  Quick classification import list
+  from sklearn.linear_model import LogisticRegression
+  from sklearn.neighbors import KNeighborsClassifier
+  from sklearn.tree import DecisionTreeClassifier
+  from sklearn.ensemble import RandomForestClassifier
+  from sklearn.svm import SVC
+  from sklearn.naive_bayes import GaussianNB
+  from sklearn.naive_bayes import MultinomialNB
+  from sklearn.ensemble import GradientBoostingClassifier
+
+A typical workflow is
+  model = RandomForestClassifier()
+  model.fit(X_train, y_train)
+  y_pred = model.predict(X_test)
